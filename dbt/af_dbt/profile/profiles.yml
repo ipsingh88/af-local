@@ -1,0 +1,13 @@
+af_dbt:
+  outputs:
+    dev:
+      host: 104.154.167.46
+      database: "{{ env_var('DBT_DBNAME_PRD') }}"
+      port: 5432
+      schema: "{{ env_var('DBT_SCHEMA') }}"
+      threads: 2
+      type: postgres
+      user: "{{ env_var('DBT_USER_PRD') }}"
+      password: "{{ env_var('DBT_ENV_SECRET_PWD_PRD') }}"
+      keepalives_idle: 0 
+  target: dev

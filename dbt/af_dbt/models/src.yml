@@ -1,0 +1,8 @@
+version: 2
+
+sources: 
+
+  - name: af_local_raw
+    tables:
+      - name: maternal_opioid_use_hospital_stays
+                      
