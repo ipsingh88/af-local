@@ -67,7 +67,7 @@ in_cluster = False
 
 dbt_run = KubernetesPodOperator(
     name="dbt_run",
-    image="ipsingh88/local_dbt",
+    image="ipsingh88/af_dbt",
     cmds=["bash", "-cx"],
     arguments=["dbt run --project-dir /dbt/ -s maternal_opioid_use_hospital_stays --profiles-dir /dbt/profile"],
     labels={"app": "dbt"},
