@@ -1,0 +1,7 @@
+*logs/
+.env
+.venv
+*__pycache__
+dbt/af_dbt/target/
+dbt/af_dbt/dbt_packages/
+dbt/af_dbt/logs/
