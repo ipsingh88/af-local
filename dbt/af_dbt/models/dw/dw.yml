@@ -1,0 +1,35 @@
+version: 2
+
+models:
+
+# base #
+
+  - name: dim_county
+    description: dimension table for county
+    columns:
+      - name: id
+        description: unique identifier of county
+        tests: [unique, not_null]
+  - name: dim_state
+    description: dimension table for state
+    columns:
+      - name: id
+        description: unique identifier of state
+        tests: [unique, not_null]        
+  - name: dim_time_period
+    description: dimension table for time period
+    columns:
+      - name: id
+        description: unique identifier of period
+        tests: [unique, not_null] 
+  - name: fact_matrenity_opioid_stats
+    description: dimension table for time period
+    columns:
+      - name: id
+        description: unique identifier of fact table
+        tests: [unique, not_null]   
+      - name: dim_county_id
+        tests:
+          - relationships:
+              to: ref('dim_county')
+              field: id                     
